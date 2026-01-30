@@ -408,8 +408,7 @@ function scrollToDemo(){
   <!-- RIGHT -->
   <div class="hero-image">
     <img 
-      src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png
-"
+      src="images/hero-ai.png"
       alt="Food Waste Reduction AI">
   </div>
 
@@ -419,28 +418,42 @@ function scrollToDemo(){
 
 
 
-<!-- ABOUT : DIAGRAM MODEL (HTML + CSS IN ONE) -->
+<!-- ABOUT : DIAGRAM MODEL WITH GREEN VIBRATION -->
 <section id="about" class="about-diagram">
 
 <style>
 .about-diagram{
   padding:90px 8%;
-  background:#f6fffb; /* light eco background */
+  background:#f6fffb;
   text-align:center;
   font-family:Arial, Helvetica, sans-serif;
 }
 
+/* HEADING WITH GREEN PULSE */
 .about-diagram h2{
   font-size:38px;
-  color:#145a32; /* dark green heading */
+  color:#145a32;
   margin-bottom:14px;
+  animation:greenGlow 3s infinite;
+}
+
+@keyframes greenGlow{
+  0%{
+    text-shadow:0 0 0 rgba(39,174,96,0.0);
+  }
+  50%{
+    text-shadow:0 0 14px rgba(39,174,96,0.45);
+  }
+  100%{
+    text-shadow:0 0 0 rgba(39,174,96,0.0);
+  }
 }
 
 .about-desc{
   max-width:800px;
   margin:0 auto 60px;
   font-size:18px;
-  color:#2d6a4f; /* soft green text */
+  color:#2d6a4f;
   line-height:1.6;
 }
 
@@ -454,17 +467,34 @@ function scrollToDemo(){
   margin-bottom:60px;
 }
 
+/* DIAGRAM BOX WITH SOFT VIBRATION */
 .diagram-box{
   background:#ffffff;
   padding:24px;
-  border-radius:16px;
+  border-radius:18px;
   width:220px;
-  box-shadow:0 10px 25px rgba(39,174,96,0.15); /* green shadow */
+  box-shadow:0 10px 25px rgba(39,174,96,0.18);
+  animation:boxPulse 4s infinite;
+}
+
+@keyframes boxPulse{
+  0%{
+    transform:scale(1);
+    box-shadow:0 10px 25px rgba(39,174,96,0.15);
+  }
+  50%{
+    transform:scale(1.03);
+    box-shadow:0 18px 40px rgba(39,174,96,0.35);
+  }
+  100%{
+    transform:scale(1);
+    box-shadow:0 10px 25px rgba(39,174,96,0.15);
+  }
 }
 
 .diagram-box h3{
   margin:12px 0 6px;
-  color:#145a32; /* dark green title */
+  color:#145a32;
   font-size:18px;
 }
 
@@ -473,45 +503,35 @@ function scrollToDemo(){
   color:#333;
 }
 
+/* STEP CIRCLE WITH GREEN RIPPLE */
 .step{
   display:inline-block;
   width:34px;
   height:34px;
-  background:#27ae60; /* primary green */
+  background:#27ae60;
   color:white;
   border-radius:50%;
   line-height:34px;
   font-weight:bold;
+  animation:stepPulse 2.5s infinite;
+}
+
+@keyframes stepPulse{
+  0%{
+    box-shadow:0 0 0 0 rgba(39,174,96,0.5);
+  }
+  70%{
+    box-shadow:0 0 0 12px rgba(39,174,96,0);
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(39,174,96,0);
+  }
 }
 
 .arrow{
   font-size:26px;
-  color:#27ae60; /* green arrows */
+  color:#27ae60;
   font-weight:bold;
-}
-
-/* HIGHLIGHTS */
-.about-highlights{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
-}
-
-.highlight-card{
-  background:#145a32; /* deep green card */
-  color:white;
-  padding:26px;
-  border-radius:16px;
-}
-
-.highlight-card h4{
-  margin-top:0;
-  font-size:18px;
-}
-
-.highlight-card p{
-  font-size:14px;
-  opacity:0.95;
 }
 
 /* MOBILE */
@@ -522,7 +542,6 @@ function scrollToDemo(){
 }
 </style>
 
-
 <h2>About WasteSense AI</h2>
 
 <p class="about-desc">
@@ -530,6 +549,8 @@ function scrollToDemo(){
   hospitality businesses reduce food waste, cut costs, and achieve
   sustainability goals using AI-driven insights.
 </p>
+
+</section>
 
 <!-- DIAGRAM : BIG SIZE + CENTER GREEN CIRCLE -->
 <div class="diagram diagram-large">
@@ -645,33 +666,13 @@ function scrollToDemo(){
 </div>
 
 </section>
-<!-- PROBLEM SECTION : BEFORE vs AFTER WITH IMAGES -->
-<section id="problem" class="problem-compare">
+<section class="problem-compare">
 
 <style>
 .problem-compare{
   padding:100px 8%;
   background:#f6fffb;
   font-family:Arial, Helvetica, sans-serif;
-}
-
-/* HEADER */
-.problem-compare .head{
-  text-align:center;
-  max-width:900px;
-  margin:0 auto 80px;
-}
-
-.problem-compare h2{
-  font-size:40px;
-  color:#145a32;
-  margin-bottom:16px;
-}
-
-.problem-compare .head p{
-  font-size:18px;
-  color:#2d6a4f;
-  line-height:1.7;
 }
 
 /* GRID */
@@ -686,21 +687,10 @@ function scrollToDemo(){
 /* CARD */
 .compare-card{
   background:#ffffff;
-  padding:40px 36px;
-  border-radius:26px;
+  padding:42px 36px;
+  border-radius:28px;
   box-shadow:0 20px 45px rgba(39,174,96,0.22);
   text-align:center;
-}
-
-/* IMAGE */
-.compare-img{
-  width:100%;
-  max-width:220px;
-  margin:0 auto 20px;
-}
-
-.compare-img img{
-  width:100%;
 }
 
 /* LABEL */
@@ -710,7 +700,7 @@ function scrollToDemo(){
   border-radius:30px;
   font-size:14px;
   font-weight:bold;
-  margin-bottom:18px;
+  margin-bottom:22px;
 }
 
 .before{
@@ -723,13 +713,54 @@ function scrollToDemo(){
   color:#145a32;
 }
 
-/* LIST */
+/* IMAGE CARD (SMALLER SIZE) */
+.image-box{
+  background:#ffffff;
+  border-radius:22px;
+  padding:12px;                 /* reduced */
+  box-shadow:
+    0 0 0 2px #e7f8ef,
+    0 18px 45px rgba(39,174,96,0.30);  /* softer shadow */
+  margin:0 auto 24px;
+  max-width:240px;              /* reduced from 320 */
+  animation:greenPulse 3s infinite;
+}
+
+/* IMAGE */
+.image-box img{
+  width:100%;
+  border-radius:14px;           /* reduced */
+  display:block;
+}
+
+
+/* GREEN VIBRATION / GLOW */
+@keyframes greenPulse{
+  0%{
+    box-shadow:
+      0 0 0 2px #e7f8ef,
+      0 20px 45px rgba(39,174,96,0.35);
+  }
+  50%{
+    box-shadow:
+      0 0 0 6px rgba(39,174,96,0.4),
+      0 30px 70px rgba(39,174,96,0.55);
+  }
+  100%{
+    box-shadow:
+      0 0 0 2px #e7f8ef,
+      0 20px 45px rgba(39,174,96,0.35);
+  }
+}
+
+/* TITLE */
 .compare-card h3{
   font-size:24px;
-  margin-bottom:14px;
+  margin-bottom:16px;
   color:#145a32;
 }
 
+/* LIST */
 .compare-list{
   list-style:none;
   padding:0;
@@ -742,10 +773,8 @@ function scrollToDemo(){
   font-size:16px;
   position:relative;
   padding-left:26px;
-  line-height:1.5;
 }
 
-/* ICONS */
 .before-list li::before{
   content:"✖";
   position:absolute;
@@ -762,49 +791,67 @@ function scrollToDemo(){
   font-weight:bold;
 }
 
-/* IMPACT */
-.compare-impact{
-  max-width:1000px;
-  margin:90px auto 0;
-  background:linear-gradient(135deg,#145a32,#1e8449);
-  color:white;
-  padding:46px;
-  border-radius:28px;
-  text-align:center;
-}
-
-.compare-impact h4{
-  font-size:26px;
-  margin-bottom:10px;
-}
-
-.compare-impact p{
-  font-size:16px;
-  opacity:0.95;
-}
-
 /* MOBILE */
 @media(max-width:900px){
   .compare-grid{
     grid-template-columns:1fr;
   }
+}
+</style>
+<!-- SIMPLE SECTION HEADING -->
+<div class="simple-head">
 
-  .problem-compare h2{
-    font-size:32px;
-  }
+<style>
+.simple-head{
+  max-width:900px;
+  margin:0 auto 70px;
+  text-align:center;
+}
 
-  .compare-list{
-    text-align:left;
+/* HEADING */
+.simple-head h2{
+  font-size:38px;
+  color:#145a32;
+  margin-bottom:14px;
+  position:relative;
+  display:inline-block;
+}
+
+/* GREEN UNDERLINE */
+.simple-head h2::after{
+  content:"";
+  width:70px;
+  height:4px;
+  background:#27ae60;
+  display:block;
+  margin:12px auto 0;
+  border-radius:2px;
+}
+
+/* TEXT */
+.simple-head p{
+  font-size:18px;
+  color:#2d6a4f;
+  line-height:1.7;
+  margin-top:22px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .simple-head h2{
+    font-size:30px;
   }
 }
 </style>
 
-<div class="head">
-  <h2>The Food Waste Reality</h2>
-  <p>
-    Hospitality businesses struggle with food waste due to outdated
-    methods and lack of predictive intelligence.
-  </p>
+<h2>The Hidden Cost of Food Waste</h2>
+
+<p>
+  Many hospitality businesses lose revenue every day due to inaccurate
+  forecasting, overproduction, and the lack of real-time, data-driven
+  decision making.
+</p>
+
 </div>
 
 <div class="compare-grid">
@@ -813,8 +860,8 @@ function scrollToDemo(){
   <div class="compare-card">
     <span class="compare-label before">BEFORE</span>
 
-    <div class="compare-img">
-      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Food waste problem">
+    <div class="image-box">
+      <img src="images/before.png" alt="Food waste problem">
     </div>
 
     <h3>Traditional Methods</h3>
@@ -831,8 +878,8 @@ function scrollToDemo(){
   <div class="compare-card">
     <span class="compare-label after">AFTER</span>
 
-    <div class="compare-img">
-      <img src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png" alt="AI food waste solution">
+    <div class="image-box">
+      <img src="images/after.png" alt="AI-powered food waste reduction">
     </div>
 
     <h3>With WasteSense AI</h3>
@@ -847,32 +894,63 @@ function scrollToDemo(){
 
 </div>
 
-
 </section>
 
-<!-- HOW IT WORKS : DIAGRAM + TIMELINE MODEL -->
+
+<!-- HOW IT WORKS : DIAGRAM + TIMELINE WITH GREEN LIGHTS -->
 <section id="how-it-works" class="how-works">
 
 <style>
 .how-works{
   padding:90px 8%;
-  background:#f6fffb; /* light eco background */
+  background:#f6fffb;
   font-family:Arial, Helvetica, sans-serif;
+  position:relative;
+  overflow:hidden;
 }
 
+/* SOFT BACKGROUND GREEN LIGHTS */
+.how-works::before,
+.how-works::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,rgba(39,174,96,0.25),transparent 70%);
+  filter:blur(70px);
+  z-index:0;
+}
+
+.how-works::before{
+  top:-120px;
+  left:-120px;
+}
+
+.how-works::after{
+  bottom:-120px;
+  right:-120px;
+}
+
+/* HEADING WITH GREEN GLOW */
 .how-works h2{
+  position:relative;
+  z-index:1;
   text-align:center;
   font-size:38px;
-  color:#145a32; /* dark green heading */
+  color:#145a32;
   margin-bottom:14px;
+  text-shadow:0 0 18px rgba(39,174,96,0.4);
 }
 
+/* DESCRIPTION */
 .how-desc{
+  position:relative;
+  z-index:1;
   max-width:800px;
   margin:0 auto 70px;
   text-align:center;
   font-size:18px;
-  color:#2d6a4f; /* soft green text */
+  color:#2d6a4f;
   line-height:1.6;
 }
 
@@ -881,8 +959,10 @@ function scrollToDemo(){
   position:relative;
   max-width:900px;
   margin:0 auto;
+  z-index:1;
 }
 
+/* TIMELINE GLOW LINE */
 .timeline::before{
   content:"";
   position:absolute;
@@ -890,10 +970,12 @@ function scrollToDemo(){
   top:0;
   width:4px;
   height:100%;
-  background:#27ae60; /* green timeline */
+  background:#27ae60;
   transform:translateX(-50%);
+  box-shadow:0 0 16px rgba(39,174,96,0.6);
 }
 
+/* STEP */
 .step{
   position:relative;
   width:50%;
@@ -910,16 +992,19 @@ function scrollToDemo(){
   text-align:left;
 }
 
+/* STEP BOX WITH SOFT LIGHT */
 .step-box{
   background:#ffffff;
   padding:24px;
   border-radius:16px;
-  box-shadow:0 10px 25px rgba(39,174,96,0.15); /* green shadow */
+  box-shadow:
+    0 10px 25px rgba(39,174,96,0.18),
+    0 0 20px rgba(39,174,96,0.15);
 }
 
 .step-box h3{
   margin:0 0 6px;
-  color:#145a32; /* dark green title */
+  color:#145a32;
   font-size:20px;
 }
 
@@ -929,18 +1014,22 @@ function scrollToDemo(){
   color:#333;
 }
 
+/* STEP CIRCLE WITH GREEN RING */
 .step-circle{
   position:absolute;
   top:40px;
   width:34px;
   height:34px;
-  background:#27ae60; /* primary green */
+  background:#27ae60;
   color:white;
   border-radius:50%;
   text-align:center;
   line-height:34px;
   font-weight:bold;
   z-index:2;
+  box-shadow:
+    0 0 0 6px rgba(39,174,96,0.25),
+    0 0 18px rgba(39,174,96,0.7);
 }
 
 .step-left .step-circle{
@@ -951,15 +1040,20 @@ function scrollToDemo(){
   left:-17px;
 }
 
-/* FINAL RESULT BOX */
+/* FINAL RESULT BOX WITH LIGHT */
 .result-box{
+  position:relative;
+  z-index:1;
   margin:80px auto 0;
   max-width:800px;
-  background:#145a32; /* deep green result box */
+  background:#145a32;
   color:white;
   padding:30px;
   border-radius:18px;
   text-align:center;
+  box-shadow:
+    0 25px 50px rgba(39,174,96,0.35),
+    0 0 30px rgba(39,174,96,0.45);
 }
 
 .result-box h4{
@@ -998,7 +1092,6 @@ function scrollToDemo(){
 }
 </style>
 
-
 <h2>How WasteSense AI Works</h2>
 
 <p class="how-desc">
@@ -1009,76 +1102,94 @@ function scrollToDemo(){
 
 <div class="timeline">
 
-  <!-- STEP 1 -->
   <div class="step step-left">
     <div class="step-circle">1</div>
     <div class="step-box">
       <h3>Data Collection</h3>
-      <p>
-        Sales, inventory, and kitchen waste data are captured from daily
-        operations and systems.
-      </p>
+      <p>Sales, inventory, and kitchen waste data are captured from daily operations.</p>
     </div>
   </div>
 
-  <!-- STEP 2 -->
   <div class="step step-right">
     <div class="step-circle">2</div>
     <div class="step-box">
       <h3>AI Processing</h3>
-      <p>
-        Advanced AI models analyse patterns, trends, and anomalies
-        within the data.
-      </p>
+      <p>AI models analyse patterns, trends, and anomalies within the data.</p>
     </div>
   </div>
 
-  <!-- STEP 3 -->
   <div class="step step-left">
     <div class="step-circle">3</div>
     <div class="step-box">
       <h3>Predictive Insights</h3>
-      <p>
-        The system predicts waste risks before they happen and suggests
-        preventive actions.
-      </p>
+      <p>Waste risks are predicted early with preventive recommendations.</p>
     </div>
   </div>
 
-  <!-- STEP 4 -->
   <div class="step step-right">
     <div class="step-circle">4</div>
     <div class="step-box">
       <h3>Smart Decisions</h3>
-      <p>
-        Teams use real-time insights to reduce waste, control costs, and
-        improve sustainability.
-      </p>
+      <p>Teams act on insights to reduce waste, control costs, and improve sustainability.</p>
     </div>
   </div>
 
+</div>
 
 </section>
 
 
-<!-- FEATURES : PREMIUM AI MODEL (HTML + CSS IN ONE) -->
+
+<!-- FEATURES : PREMIUM AI MODEL WITH GREEN LIGHTS -->
 <section id="features" class="features-premium">
 
 <style>
 .features-premium{
+  position:relative;
   padding:100px 8%;
   background:linear-gradient(180deg,#f3fff9,#ffffff);
   font-family:Arial, Helvetica, sans-serif;
+  overflow:hidden;
 }
 
-/* HEADING */
+/* SOFT GREEN LIGHTS */
+.features-premium::before,
+.features-premium::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  background:radial-gradient(circle,rgba(39,174,96,0.25),transparent 70%);
+  filter:blur(60px);
+  animation:floatLight 8s infinite alternate;
+}
+
+.features-premium::before{
+  top:-100px;
+  left:-100px;
+}
+
+.features-premium::after{
+  bottom:-120px;
+  right:-120px;
+  animation-delay:3s;
+}
+
+@keyframes floatLight{
+  from{ transform:translateY(0); }
+  to{ transform:translateY(40px); }
+}
+
+/* HEADING WITH GREEN GLOW */
 .features-premium h2{
   text-align:center;
   font-size:40px;
   color:#0b3d2e;
   margin-bottom:12px;
+  text-shadow:0 0 18px rgba(39,174,96,0.35);
 }
 
+/* SUBTITLE */
 .features-premium .subtitle{
   max-width:820px;
   margin:0 auto 80px;
@@ -1088,12 +1199,14 @@ function scrollToDemo(){
   line-height:1.7;
 }
 
-/* GRID LAYOUT */
+/* GRID */
 .features-grid{
+  position:relative;
   display:grid;
   grid-template-columns:1.2fr 1fr;
   gap:70px;
   align-items:center;
+  z-index:1;
 }
 
 /* FEATURE CARDS */
@@ -1104,19 +1217,26 @@ function scrollToDemo(){
 }
 
 .feature-card{
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.92);
   padding:26px 26px 30px;
   border-radius:18px;
-  box-shadow:0 15px 35px rgba(39,174,96,0.12);
+  box-shadow:0 15px 35px rgba(39,174,96,0.18);
   position:relative;
   overflow:hidden;
+  transition:0.3s;
 }
 
+.feature-card:hover{
+  box-shadow:0 20px 50px rgba(39,174,96,0.35);
+  transform:translateY(-6px);
+}
+
+/* CARD LIGHT */
 .feature-card::before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(120deg,transparent,rgba(39,174,96,0.08));
+  background:linear-gradient(120deg,transparent,rgba(39,174,96,0.12));
 }
 
 .feature-icon{
@@ -1130,6 +1250,7 @@ function scrollToDemo(){
   justify-content:center;
   font-size:20px;
   margin-bottom:14px;
+  box-shadow:0 0 14px rgba(39,174,96,0.6);
 }
 
 .feature-card h3{
@@ -1145,13 +1266,22 @@ function scrollToDemo(){
   line-height:1.6;
 }
 
-/* RIGHT PANEL */
+/* RIGHT PANEL WITH GLOW */
 .feature-panel{
   background:linear-gradient(135deg,#0b3d2e,#1e8449);
   color:#fff;
   padding:50px 46px;
   border-radius:26px;
-  box-shadow:0 30px 60px rgba(30,132,73,0.35);
+  box-shadow:
+    0 30px 60px rgba(30,132,73,0.35),
+    0 0 40px rgba(39,174,96,0.45);
+  animation:panelGlow 4s infinite;
+}
+
+@keyframes panelGlow{
+  0%{ box-shadow:0 30px 60px rgba(30,132,73,0.35),0 0 20px rgba(39,174,96,0.3); }
+  50%{ box-shadow:0 30px 60px rgba(30,132,73,0.45),0 0 45px rgba(39,174,96,0.6); }
+  100%{ box-shadow:0 30px 60px rgba(30,132,73,0.35),0 0 20px rgba(39,174,96,0.3); }
 }
 
 .feature-panel h3{
@@ -1213,60 +1343,46 @@ function scrollToDemo(){
 
 <div class="features-grid">
 
-  <!-- LEFT FEATURE CARDS -->
   <div class="feature-cards">
 
     <div class="feature-card">
       <div class="feature-icon">📊</div>
       <h3>AI Waste Forecasting</h3>
-      <p>
-        Anticipate over-production and spoilage before it happens using
-        predictive AI models.
-      </p>
+      <p>Anticipate over-production and spoilage before it happens.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">📦</div>
       <h3>Inventory Intelligence</h3>
-      <p>
-        Optimize purchasing decisions by aligning stock levels with
-        actual demand patterns.
-      </p>
+      <p>Align stock levels with real demand patterns.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">📑</div>
       <h3>Compliance Reports</h3>
-      <p>
-        Generate regulation-ready reports aligned with UK food waste and
-        sustainability standards.
-      </p>
+      <p>Generate regulation-ready sustainability reports.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">⚡</div>
       <h3>Live Dashboards</h3>
-      <p>
-        Track waste, costs, and performance metrics in real-time through
-        a single dashboard.
-      </p>
+      <p>Track waste and costs in real time.</p>
     </div>
 
   </div>
 
-  <!-- RIGHT PANEL -->
   <div class="feature-panel">
     <h3>Why Choose WasteSense AI?</h3>
     <p>
-      Built specifically for hospitality businesses, WasteSense AI
-      focuses on prevention, compliance, and measurable impact.
+      Built for hospitality businesses that want prevention, clarity,
+      and measurable sustainability impact.
     </p>
     <ul>
       <li>Prevention-first AI technology</li>
       <li>Tailored for UK hospitality</li>
       <li>Clear cost & waste reduction</li>
       <li>Fast onboarding & adoption</li>
-      <li>Scales across multiple locations</li>
+      <li>Scales across locations</li>
     </ul>
   </div>
 
@@ -1276,19 +1392,37 @@ function scrollToDemo(){
 
 
 
-<!-- CTA : SPLIT BENEFITS + ACTION MODEL -->
+<!-- CTA : SPLIT BENEFITS + ACTION MODEL WITH GREEN LIGHTS -->
 <section id="contact" class="cta-split">
 
 <style>
-/* CTA SECTION */
 .cta-split{
+  position:relative;
   padding:100px 8%;
   background:#f6fffb;
   font-family:Arial, Helvetica, sans-serif;
+  overflow:hidden;
 }
+
+/* GREEN LIGHT GLOW */
+.cta-split::before,
+.cta-split::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,rgba(39,174,96,0.28),transparent 70%);
+  filter:blur(70px);
+  z-index:0;
+}
+
+.cta-split::before{ top:-120px; left:-120px; }
+.cta-split::after{ bottom:-120px; right:-120px; }
 
 /* CONTAINER */
 .cta-container{
+  position:relative;
+  z-index:1;
   max-width:1100px;
   margin:0 auto;
   display:grid;
@@ -1297,11 +1431,12 @@ function scrollToDemo(){
   align-items:center;
 }
 
-/* LEFT CONTENT */
+/* LEFT */
 .cta-left h2{
   font-size:38px;
   color:#145a32;
   margin-bottom:16px;
+  text-shadow:0 0 18px rgba(39,174,96,0.35);
 }
 
 .cta-left p{
@@ -1314,7 +1449,6 @@ function scrollToDemo(){
 .cta-benefits{
   list-style:none;
   padding:0;
-  margin:0;
 }
 
 .cta-benefits li{
@@ -1333,46 +1467,41 @@ function scrollToDemo(){
   font-weight:bold;
 }
 
-/* RIGHT ACTION */
+/* RIGHT CARD */
 .cta-right{
   background:#ffffff;
   padding:40px;
   border-radius:24px;
-  box-shadow:0 25px 50px rgba(39,174,96,0.25);
+  box-shadow:
+    0 25px 50px rgba(39,174,96,0.30),
+    0 0 30px rgba(39,174,96,0.35);
+  text-align:center;
 }
 
 .cta-right h4{
-  margin-top:0;
   font-size:22px;
   color:#145a32;
   margin-bottom:20px;
 }
 
-.cta-form input,
-.cta-form textarea{
+/* EMAIL BUTTON */
+.email-btn{
+  display:block;
   width:100%;
-  padding:14px;
-  margin-bottom:14px;
-  border-radius:12px;
-  border:1px solid #cde9db;
-  font-size:15px;
-}
-
-.cta-form textarea{
-  min-height:90px;
-  resize:none;
-}
-
-.cta-form button{
-  width:100%;
-  padding:14px;
+  padding:16px;
   background:#27ae60;
   color:white;
-  border:none;
+  text-decoration:none;
   border-radius:30px;
   font-size:16px;
   font-weight:bold;
-  cursor:pointer;
+  box-shadow:0 0 18px rgba(39,174,96,0.6);
+  transition:0.3s;
+}
+
+.email-btn:hover{
+  box-shadow:0 0 30px rgba(39,174,96,0.9);
+  transform:translateY(-2px);
 }
 
 /* FOOTER */
@@ -1422,23 +1551,21 @@ function scrollToDemo(){
   <div class="cta-right">
     <h4>Request a Demo</h4>
 
-    <form class="cta-form">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Contact">
-      <textarea placeholder="Your message"></textarea>
-      <button type="submit">Get Started</button>
-    </form>
+    <a class="email-btn"
+       href="mailto:gayamnithyareddi99@gmail.com
+       ?subject=WasteSense AI Demo Request
+       &body=Hello,%0D%0A%0D%0AI would like to request a demo of WasteSense AI.%0D%0A%0D%0AThank you">
+       Get Started
+    </a>
   </div>
 
 </div>
-
 </section>
 
 <footer class="footer-split">
   © 2026 WasteSense AI · United Kingdom · Sustainability Driven
 </footer>
->
+
 
 </body>
 </html>
